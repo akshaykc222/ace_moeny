@@ -2,6 +2,8 @@ import 'dart:ffi';
 
 import 'package:flutter/cupertino.dart';
 import 'package:get/get.dart';
+import 'package:untitled7/Ace_Money/presentation/routes/App_Pages.dart';
+import 'package:untitled7/Ace_Money/presentation/routes/App_Routes.dart';
 
 class App extends StatelessWidget {
   const App({Key? key}) : super(key: key);
@@ -10,8 +12,8 @@ class App extends StatelessWidget {
   Widget build(BuildContext context) {
     return GetMaterialApp(
       debugShowCheckedModeBanner: false,
-      initialRoute: null,
-      getPages: null,
+      initialRoute: AppPages.homepage,
+      getPages: AppRoutes.routes,
     );
   }
 }
