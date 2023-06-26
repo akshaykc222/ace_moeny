@@ -4,6 +4,20 @@ import 'package:untitled7/Ace_Money/presentation/routes/App_Pages.dart';
 
 class AppRoutes{
 static List<GetPage> routes = [
+  ///Shibin
   GetPage(name: AppPages.homepage, page: ()=> HomePage()),
+
+
+
+
+
+
+
+
+
+
+
+  ///Shinas
+  ///
 ];
 }
