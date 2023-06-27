@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:untitled7/Ace_Money/presentation/themes/app_colors.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({Key? key}) : super(key: key);
@@ -12,7 +13,7 @@ class HomePage extends StatelessWidget {
         children: [
           Container(
             decoration: BoxDecoration(
-              color: 
+              color: AppColors.primaryColor,
             ),
           )
         ],
