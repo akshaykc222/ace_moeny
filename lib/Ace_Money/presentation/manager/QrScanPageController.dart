@@ -13,4 +13,19 @@ class QrScanController extends GetxController{
       viewController?.toggleFlash();
     }
   }
+
+  void onQRViewCreated(QRViewController controller) {
+
+    controller = controller;
+
+    controller.scannedDataStream.listen((scanData) {
+      controller.pauseCamera();
+
+      // Handle the scanned QR code data
+      print('Scanned data: ${scanData.code}');
+
+      // Resume the camera after handling the scan
+      controller.resumeCamera();
+    });
+  }
 }
