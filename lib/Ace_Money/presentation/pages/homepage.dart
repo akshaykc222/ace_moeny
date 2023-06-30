@@ -14,7 +14,7 @@ class DashBoard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final controller = Get.find<DashBoardController>();
+    final controller = Get.put(DashBoardController());
 
     double h = MediaQuery
         .of(context)
@@ -50,6 +50,8 @@ class DashBoard extends StatelessWidget {
                     child: Padding(
                       padding: const EdgeInsets.all(10),
                       child: Column(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
                           ListTile(
                             title: Padding(
@@ -83,16 +85,23 @@ class DashBoard extends StatelessWidget {
                                 ),
                               ),
                             ),
-                            subtitle: const Text('Hello, Alonzo Leo',
-                                style: TextStyle(
-                                  fontSize: 20,
-                                  fontWeight: FontWeight.bold,
-                                )),
+                            // subtitle: const Text('Hello, Alonzo Leo',
+                            //     style: TextStyle(
+                            //       fontSize: 25,
+                            //       fontWeight: FontWeight.bold,
+                            //       color: AppColors.white
+                            //     )),
                             trailing: const CircleAvatar(
                               backgroundImage:
                               AssetImage('assets/images/Ace.jpg'),
                             ),
                           ),
+                           const Text('Hello, Alonzo Leo',
+                              style: TextStyle(
+                                fontSize: 25,
+                                fontWeight: FontWeight.bold,
+                                color: AppColors.white
+                              )),
                         ],
                       ),
                     ),

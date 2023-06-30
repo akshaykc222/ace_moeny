@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:untitled7/Ace_Money/presentation/manager/QrScanPageController.dart';
+import 'package:untitled7/Ace_Money/presentation/manager/Controller/QrScanPageController.dart';
 import 'package:untitled7/Ace_Money/presentation/themes/app_colors.dart';
 import 'package:untitled7/Ace_Money/presentation/widgets/appBar.dart';
 
@@ -67,9 +67,9 @@ class _QrScanPageState extends State<QrScanPage> {
               child: Container(
                 margin: const EdgeInsets.all(16.0),
                 child: FloatingActionButton(
-                  backgroundColor: AppColors.white,
+                  backgroundColor: AppColors.lightBlue,
                   onPressed: () => controller.scanFromGallery(context),
-                  child: const Icon(Icons.image,color: AppColors.primaryColor,),
+                  child: const Icon(Icons.image,color: AppColors.black,),
                 ),
               ),
             ),
