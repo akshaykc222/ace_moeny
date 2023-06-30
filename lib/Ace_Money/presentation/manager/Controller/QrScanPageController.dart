@@ -1,9 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-<<<<<<< HEAD
-=======
 import 'package:image_picker/image_picker.dart';
->>>>>>> origin/main
 import 'package:qr_code_scanner/qr_code_scanner.dart';
 
 class QrScanController extends GetxController{
@@ -11,10 +8,8 @@ class QrScanController extends GetxController{
   final GlobalKey qrKey = GlobalKey(debugLabel: 'QR');
   QRViewController? viewController;
   bool scanning = true;
-<<<<<<< HEAD
-=======
+
   final ImagePicker _imagePicker = ImagePicker();
->>>>>>> origin/main
 
   void toggleFlash(bool isFlashOn) {
     if (viewController != null) {
@@ -36,8 +31,7 @@ class QrScanController extends GetxController{
       controller.resumeCamera();
     });
   }
-<<<<<<< HEAD
-=======
+
 
   Future<void> scanFromGallery(BuildContext context) async {
     final pickedFile = await _imagePicker.pickImage(source: ImageSource.gallery);
@@ -99,5 +93,5 @@ class QrScanController extends GetxController{
       overlayMargin: const EdgeInsets.all(16),
     );
   }
->>>>>>> origin/main
+
 }
