@@ -1,9 +1,15 @@
 class AppPages{
   ///Shibin
-  static const homepage = '/homepage';
+  static const dashboard = '/homepage';
 
   ///Shinas
   static const qrScanPage = '/qrScanPage';
 ///
+///
+///
+///
+/// jishnu
+
+static const paycontacts = '/paycontacts';
 
 }
