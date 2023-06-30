@@ -6,9 +6,8 @@ class AppPages{
   ///Shinas
   static const qrScanPage = '/qrScanPage';
 ///
-///
-///
-///
+
+
 /// jishnu
 
 static const paycontacts = '/paycontacts';

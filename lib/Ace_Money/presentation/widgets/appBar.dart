@@ -16,7 +16,7 @@ class AppBarWidget extends StatelessWidget implements PreferredSizeWidget {
   @override
   Widget build(BuildContext context) {
     return AppBar(
-      backgroundColor: AppColors.primaryColor, // Customize the background color
+      backgroundColor: AppColors.lightBlue, // Customize the background color
       elevation: 0, // Remove the drop shadow
        title: const Text(
          'QR CODE SCANNER',
