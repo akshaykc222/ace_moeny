@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_staggered_animations/flutter_staggered_animations.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:get/get.dart';
+import 'package:lottie/lottie.dart';
 import 'package:untitled7/Ace_Money/presentation/manager/Controller/DashBoard_Controller.dart';
 import 'package:untitled7/Ace_Money/presentation/themes/app_colors.dart';
 
@@ -16,14 +17,8 @@ class DashBoard extends StatelessWidget {
   Widget build(BuildContext context) {
     final controller = Get.find<DashBoardController>();
 
-    double h = MediaQuery
-        .of(context)
-        .size
-        .height;
-    double w = MediaQuery
-        .of(context)
-        .size
-        .width;
+    double h = MediaQuery.of(context).size.height;
+    double w = MediaQuery.of(context).size.width;
 
     return Scaffold(
       backgroundColor: AppColors.primaryColor,
@@ -90,7 +85,7 @@ class DashBoard extends StatelessWidget {
                                 )),
                             trailing: const CircleAvatar(
                               backgroundImage:
-                              AssetImage('assets/images/Ace.jpg'),
+                                  AssetImage('assets/images/Ace.jpg'),
                             ),
                           ),
                         ],
@@ -110,10 +105,7 @@ class DashBoard extends StatelessWidget {
                   padding: const EdgeInsets.all(10),
                   child: Container(
                       margin: const EdgeInsets.all(10),
-                      height: MediaQuery
-                          .of(context)
-                          .size
-                          .height * 0.20,
+                      height: MediaQuery.of(context).size.height * 0.20,
                       child: AnimationLimiter(
                         child: GridView.count(
                           shrinkWrap: true,
@@ -124,26 +116,26 @@ class DashBoard extends StatelessWidget {
                           mainAxisSpacing: 15,
                           childAspectRatio: 28 / 12,
                           children: List.generate(controller.dashIcons.length,
-                                  (int index) {
-                                return AnimationConfiguration.staggeredGrid(
-                                  position: index,
-                                  duration: const Duration(
-                                    milliseconds: 800,
+                              (int index) {
+                            return AnimationConfiguration.staggeredGrid(
+                              position: index,
+                              duration: const Duration(
+                                milliseconds: 800,
+                              ),
+                              columnCount: controller.dashIcons.length,
+                              child: ScaleAnimation(
+                                duration: const Duration(
+                                  milliseconds: 900,
+                                ),
+                                curve: Curves.fastLinearToSlowEaseIn,
+                                child: FadeInAnimation(
+                                  child: CustomIcon(
+                                    iconModal: controller.dashIcons[index],
                                   ),
-                                  columnCount: controller.dashIcons.length,
-                                  child: ScaleAnimation(
-                                    duration: const Duration(
-                                      milliseconds: 900,
-                                    ),
-                                    curve: Curves.fastLinearToSlowEaseIn,
-                                    child: FadeInAnimation(
-                                      child: CustomIcon(
-                                        iconModal: controller.dashIcons[index],
-                                      ),
-                                    ),
-                                  ),
-                                );
-                              }),
+                                ),
+                              ),
+                            );
+                          }),
                         ),
                       )),
                 ),
@@ -174,6 +166,48 @@ class DashBoard extends StatelessWidget {
                     ),
                   ),
                 ),
+
+
+                // SingleChildScrollView(
+                //   scrollDirection: Axis.horizontal,
+                //   child: Row(
+                //     crossAxisAlignment: CrossAxisAlignment.start,
+                //     children: [
+                //       Padding(
+                //         padding: EdgeInsets.only(left: w*0.05, top: 15,right: w*0.02),
+                //         child: Center(
+                //           child: Container(
+                //             decoration: BoxDecoration(
+                //               borderRadius: BorderRadius.circular(30),
+                //               color: AppColors.cardLightGrey,
+                //             ),
+                //             height: h*0.3,
+                //             width: w*0.8,
+                //             child: Image.asset('assets/images/Ace (3).png',
+                //                 fit: BoxFit.fill,),
+                //           ),
+                //         ),
+                //       ),
+                //       Padding(
+                //         padding: EdgeInsets.only(left: w*0.01, top: 15, right: w*0.03),
+                //         child: Center(
+                //           child: Container(
+                //             decoration: BoxDecoration(
+                //               borderRadius: BorderRadius.circular(30),
+                //               color: AppColors.blue,
+                //             ),
+                //             height: h*0.3,
+                //             width: w*0.8,
+                //             child: Image.asset('assets/images/Ace (5).png',
+                //               scale: 4,
+                //               fit: BoxFit.fill,),
+                //           ),
+                //         ),
+                //       ),
+                //     ],
+                //   ),
+                // )
+
               ],
             ),
           ],

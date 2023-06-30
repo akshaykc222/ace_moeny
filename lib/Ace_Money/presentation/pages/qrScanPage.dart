@@ -3,7 +3,8 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:image_picker/image_picker.dart';
 import 'package:qr_code_scanner/qr_code_scanner.dart';
-import 'package:untitled7/Ace_Money/presentation/manager/QrScanPageController.dart';
+import 'package:untitled7/Ace_Money/presentation/manager/Controller/DashBoard_Controller.dart';
+import 'package:untitled7/Ace_Money/presentation/manager/Controller/QrScanPageController.dart';
 import 'package:untitled7/Ace_Money/presentation/themes/app_colors.dart';
 import 'package:untitled7/Ace_Money/presentation/widgets/appBar.dart';
 
@@ -18,6 +19,7 @@ class _QrScanPageState extends State<QrScanPage> {
   final controller = Get.put(QrScanController());
   bool isFlashOn = false;
   final ImagePicker _imagePicker = ImagePicker();
+  // final dashController = Get.find<DashBoardController>();
 
   @override
   void dispose() {

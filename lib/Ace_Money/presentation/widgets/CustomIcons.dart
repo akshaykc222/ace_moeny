@@ -15,7 +15,6 @@ class CustomIcon extends StatelessWidget {
   }) : super(key: key);
 
   final CustomIconModal iconModal;
-  final controller = Get.find<DashBoardController>();
 
   @override
   Widget build(BuildContext context) {
