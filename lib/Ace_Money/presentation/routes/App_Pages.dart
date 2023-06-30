@@ -1,34 +1,15 @@
-class AppPages {
+class AppPages{
   ///Shibin
   static const dashboard = '/homepage';
 
-  ///
-  ///
-  ///
-  ///
-  ///
-  ///
-  ///
-  ///
-  ///
-  ///
-  ///
-  ///
-  ///
-  ///
-  ///
   ///Shinas
-  ///
-  ///
-  ///
-  ///
-  ///
-  ///
-  ///
-  ///
-  ///
-  ///
-  ///
-  ///jishnu
-  static const paycontacts = '/paycontacts';
+  static const qrScanPage = '/qrScanPage';
+///
+///
+///
+///
+/// jishnu
+
+static const paycontacts = '/paycontacts';
+
 }
