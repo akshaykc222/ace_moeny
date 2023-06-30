@@ -1,6 +1,6 @@
 class AppPages {
   ///Shibin
-  static const homepage = '/homepage';
+  static const dashboard = '/homepage';
 
   ///
   ///

@@ -10,7 +10,7 @@ class App extends StatelessWidget {
   Widget build(BuildContext context) {
     return GetMaterialApp(
       debugShowCheckedModeBanner: false,
-      initialRoute: AppPages.homepage,
+      initialRoute: AppPages.dashboard,
       getPages: AppRoutes.routes,
     );
   }
