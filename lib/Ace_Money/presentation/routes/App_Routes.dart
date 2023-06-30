@@ -11,6 +11,10 @@ class AppRoutes {
     ///Shibin
     GetPage(name: AppPages.dashboard, page: () => DashBoard(), binding: DashBoardBindings()),
     GetPage(name: AppPages.createVpaScreen, page: ()=> CreateVpaScreen()),
+
+
+
+
     ///Shinas
     ///
     ///
