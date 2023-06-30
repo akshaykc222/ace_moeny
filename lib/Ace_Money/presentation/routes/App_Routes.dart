@@ -1,9 +1,9 @@
 import 'package:get/get_navigation/src/routes/get_route.dart';
 import 'package:untitled7/Ace_Money/presentation/pages/addBankAccount.dart';
-import 'package:untitled7/Ace_Money/presentation/pages/homepage.dart';
 import 'package:untitled7/Ace_Money/presentation/pages/qrScanPage.dart';
 import 'package:untitled7/Ace_Money/presentation/routes/App_Pages.dart';
 
+import '../pages/dashboard.dart';
 import '../pages/payContacts.dart';
 
 class AppRoutes {
