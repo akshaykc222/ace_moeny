@@ -6,6 +6,6 @@ class CustomIconModal {
   final IconData customIconModal;
   final Function? ontap;
 
-  CustomIconModal({this.ontap, required this.title,required this.customIconModal});
+  CustomIconModal({ this.ontap, required this.title,required this.customIconModal});
 
 }

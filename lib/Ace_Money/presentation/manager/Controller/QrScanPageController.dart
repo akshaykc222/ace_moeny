@@ -8,6 +8,7 @@ class QrScanController extends GetxController{
   final GlobalKey qrKey = GlobalKey(debugLabel: 'QR');
   QRViewController? viewController;
   bool scanning = true;
+
   final ImagePicker _imagePicker = ImagePicker();
 
   void toggleFlash(bool isFlashOn) {
@@ -30,6 +31,7 @@ class QrScanController extends GetxController{
       controller.resumeCamera();
     });
   }
+
 
   Future<void> scanFromGallery(BuildContext context) async {
     final pickedFile = await _imagePicker.pickImage(source: ImageSource.gallery);
@@ -91,4 +93,5 @@ class QrScanController extends GetxController{
       overlayMargin: const EdgeInsets.all(16),
     );
   }
+
 }
