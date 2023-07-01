@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 class AppColors {
-  static const primaryColors = Colors.white;
+  static const primaryColor = Colors.white;
   static const onboardingcolor1 = Color(0xffa3d3f7);
   static const onboardingcolor2 = Color(0xffd1eeff);
   static const onboardingcolor3 = Color(0xffe2615c);
@@ -11,7 +11,7 @@ class AppColors {
   static const grey = Colors.grey;
   static const blue = Colors.blue;
   static const black = Colors.black;
-  static const primaryColor = maincolor;
+  // static const primaryColor = maincolor;
   static const white = Colors.white;
   static const lightGrey = Color(0xFFD3D3D3);
   static const offWhite = Color(0xFFf5f5f5);
