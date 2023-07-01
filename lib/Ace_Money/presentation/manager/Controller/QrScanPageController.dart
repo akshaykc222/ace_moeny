@@ -3,6 +3,8 @@ import 'package:get/get.dart';
 import 'package:image_picker/image_picker.dart';
 import 'package:qr_code_scanner/qr_code_scanner.dart';
 
+import '../../routes/App_Pages.dart';
+
 class QrScanController extends GetxController{
 
   final GlobalKey qrKey = GlobalKey(debugLabel: 'QR');
@@ -41,6 +43,7 @@ class QrScanController extends GetxController{
       if (result != null) {
 // Handle the scanned data
         print(result);
+        Get.toNamed(AppPages.payupiidpage2);
       } else {
         showDialog(
           context: context,

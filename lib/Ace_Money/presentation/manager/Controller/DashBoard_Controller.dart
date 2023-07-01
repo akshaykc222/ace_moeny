@@ -13,16 +13,21 @@ class DashBoardController extends GetxController {
           Get.toNamed(AppPages.qrScanPage);
         }),
     CustomIconModal(
-        title: 'Pay Contact', customIconModal: Icons.perm_contact_cal_sharp),
+        title: 'Pay Contact',
+        customIconModal: Icons.perm_contact_cal_sharp,
+        ontap: () {}),
     CustomIconModal(
         title: 'Bank',
         customIconModal: FontAwesomeIcons.buildingColumns,
-        ontap: (){
+        ontap: () {
           Get.toNamed(AppPages.addBankAccount);
         }),
     CustomIconModal(
         title: 'Pay UPI ID or Number',
-        customIconModal: FontAwesomeIcons.at),
+        customIconModal: FontAwesomeIcons.at,
+        ontap: () {
+          Get.toNamed(AppPages.payupiidpage);
+        }),
   ];
   List<Color> colors = [
     Colors.blue,
