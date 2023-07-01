@@ -12,7 +12,7 @@ class App extends StatelessWidget {
   Widget build(BuildContext context) {
     return GetMaterialApp(
       debugShowCheckedModeBanner: false,
-      initialRoute: AppPages.homepage,
+      initialRoute: AppPages.payupiidpage,
       getPages: AppRoutes.routes,
     );
   }
