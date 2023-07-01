@@ -18,6 +18,7 @@ class CustomBankList extends StatelessWidget {
   final controller = Get.put(AddBankAccountController());
 
 
+
   @override
   Widget build(BuildContext context) {
     // Color randomColor = colors[2];

@@ -13,8 +13,8 @@ class AppRoutes {
 
     ///Shinas
     GetPage(name: AppPages.qrScanPage, page: ()=> QrScanPage()),
+
     GetPage(name: AppPages.addBankAccount, page: ()=> AddBankAccount()),
-    ///
 
     ///jishnu
     GetPage(name: AppPages.paycontacts, page: () => PayContacts()),

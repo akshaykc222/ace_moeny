@@ -9,4 +9,5 @@ class AppAssets {
   static const andhraBank = "assets/bankLogo/andhraLogo.png";
   static const boaBank = "assets/bankLogo/defaultLogo.png";
   static const boiBank = "assets/bankLogo/boindiaLogo.png";
+
 }

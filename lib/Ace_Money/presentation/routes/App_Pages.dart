@@ -6,7 +6,6 @@ class AppPages{
   ///Shinas
   static const qrScanPage = '/qrScanPage';
   static const addBankAccount = '/addBankAccount';
-///
 
 
 /// jishnu

@@ -109,7 +109,6 @@ class AddBankAccountController extends GetxController {
     'Z',
   ];
 
-  // filteredBanks.addAll(banks);
 
   void scrollToLetter(String letter) {
     selectedLetter = letter;
