@@ -1,9 +1,11 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:get/get.dart';
 import 'package:intl_phone_field/intl_phone_field.dart';
 import 'package:untitled7/Ace_Money/presentation/Manager/payPhoneNoController.dart';
 import 'package:untitled7/Ace_Money/presentation/pages/payContacts.dart';
+import 'package:untitled7/Ace_Money/presentation/pages/payupiid_page2.dart';
 import 'package:untitled7/Ace_Money/presentation/routes/App_Pages.dart';
 import 'package:untitled7/Ace_Money/presentation/routes/App_Routes.dart';
 import 'package:untitled7/Ace_Money/presentation/themes/app_colors.dart';
@@ -61,17 +63,25 @@ class PayPhoneNo extends StatelessWidget {
               children: [
                 Expanded(
                   flex: 5,
-                  child: IntlPhoneField(
+                  child: TextFormField(
                     autofocus: true,
+                    validator: (value) {
+                      if (value == null || value.length != 10) {
+                        return "Enter a valid UPI verified Number";
+                      }
+                    },
                     decoration: InputDecoration(
                       border: OutlineInputBorder(
                           borderSide: BorderSide(
                         width: 1,
                       )),
                     ),
-                    initialCountryCode: "IN",
+                    inputFormatters: [LengthLimitingTextInputFormatter(10)],
                     controller: controller.payPhonenocntler,
                     keyboardType: TextInputType.phone,
+                    onChanged: (value) {
+                      controller.payPhonenocntler.text = value;
+                    },
                   ),
                 ),
                 Expanded(
@@ -84,7 +94,7 @@ class PayPhoneNo extends StatelessWidget {
                       Get.toNamed(AppPages.paycontacts);
                     },
                     child: Padding(
-                      padding: const EdgeInsets.only(bottom: 20),
+                      padding: const EdgeInsets.only(bottom: 0),
                       child: Container(
                         decoration: BoxDecoration(
                             shape: BoxShape.circle,
@@ -103,20 +113,32 @@ class PayPhoneNo extends StatelessWidget {
               ],
             ),
           ),
-          Padding(
-            padding: EdgeInsets.fromLTRB(10, 15, 10, 10),
-            child: SizedBox(
-              width: MediaQuery.of(context).size.width,
-              height: 40,
-              child: ElevatedButton(
-                onPressed: () {},
-                child: Text("Continue"),
-                style: ElevatedButton.styleFrom(
-                  backgroundColor: AppColors.primaryColor,
+          controller.payPhonenocntler.text.isEmpty ||
+                  controller.payPhonenocntler.text.length != 10
+              ? SizedBox()
+              : Padding(
+                  padding: EdgeInsets.fromLTRB(10, 15, 10, 10),
+                  child: SizedBox(
+                    width: MediaQuery.of(context).size.width,
+                    height: 40,
+                    child: ElevatedButton(
+                      onPressed: () {
+                        if (controller.payPhonenocntler.text == "") {
+                          Get.snackbar("Error",
+                              "enter a Valid Upi verified PhoneNumber");
+                        } else {
+                          Get.to(PayUpiIdScreen2(
+                            paymentTo: controller.payPhonenocntler.text,
+                          ));
+                        }
+                      },
+                      child: Text("Continue"),
+                      style: ElevatedButton.styleFrom(
+                        backgroundColor: AppColors.primaryColor,
+                      ),
+                    ),
+                  ),
                 ),
-              ),
-            ),
-          ),
         ],
       )),
     ));

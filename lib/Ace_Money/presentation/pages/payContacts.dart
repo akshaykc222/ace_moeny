@@ -4,6 +4,7 @@ import 'package:flutter/services.dart';
 import 'package:get/get.dart';
 import 'package:untitled7/Ace_Money/presentation/Manager/paycontactsController.dart';
 import 'package:untitled7/Ace_Money/presentation/pages/paymentUsingContacts.dart';
+import 'package:untitled7/Ace_Money/presentation/pages/payupiid_page2.dart';
 
 import '../themes/app_colors.dart';
 import 'package:flutter_typeahead/flutter_typeahead.dart';
@@ -141,9 +142,8 @@ class _PayContactsState extends State<PayContacts> {
                                       ),
                                       trailing: IconButton(
                                           onPressed: () {
-                                            Get.to(PayMentUingContacts(
-                                                title: "payment",
-                                                subtitile: controller
+                                            Get.to(PayUpiIdScreen2(
+                                                paymentTo: controller
                                                     .searchController.text));
                                           },
                                           icon: Icon(
@@ -172,18 +172,11 @@ class _PayContactsState extends State<PayContacts> {
                           itemBuilder: (context, index) {
                             return GestureDetector(
                               onTap: () {
-                                Get.to(PayMentUingContacts(
-                                    title: controller
-                                            .filteredList[index].displayName ??
-                                        "",
-                                    subtitile: controller.filteredList[index]
-                                                .phones?.isNotEmpty ==
-                                            true
-                                        ? controller.filteredList[index].phones
-                                                ?.first.value
-                                                .toString() ??
-                                            ''
-                                        : ""));
+                                Get.to(PayUpiIdScreen2(
+                                  paymentTo: controller
+                                          .filteredList[index].displayName ??
+                                      "",
+                                ));
                               },
                               child: ListTile(
                                 title: Text(controller
