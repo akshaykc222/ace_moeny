@@ -33,4 +33,6 @@ class AppColors {
   static const lightGreen = Colors.lightGreen;
   static const lightBlue = Color(0xff63ace5);
   static const peach = Color(0xffFF6D6D);
+  static const transparent = Colors.transparent;
+  static const yellow = Colors.yellow;
 }
