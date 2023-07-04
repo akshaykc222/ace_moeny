@@ -76,12 +76,12 @@ class PayPhoneNo extends StatelessWidget {
                         width: 1,
                       )),
                     ),
-                    inputFormatters: [LengthLimitingTextInputFormatter(10)],
                     controller: controller.payPhonenocntler,
+                    inputFormatters: [LengthLimitingTextInputFormatter(10)],
                     keyboardType: TextInputType.phone,
-                    onChanged: (value) {
-                      controller.payPhonenocntler.text = value;
-                    },
+                    // onChanged: (value) {
+                    //   controller.payPhonenocntler.text = value;
+                    // },
                   ),
                 ),
                 Expanded(
@@ -113,32 +113,30 @@ class PayPhoneNo extends StatelessWidget {
               ],
             ),
           ),
-          controller.payPhonenocntler.text.isEmpty ||
-                  controller.payPhonenocntler.text.length != 10
-              ? SizedBox()
-              : Padding(
-                  padding: EdgeInsets.fromLTRB(10, 15, 10, 10),
-                  child: SizedBox(
-                    width: MediaQuery.of(context).size.width,
-                    height: 40,
-                    child: ElevatedButton(
-                      onPressed: () {
-                        if (controller.payPhonenocntler.text == "") {
-                          Get.snackbar("Error",
-                              "enter a Valid Upi verified PhoneNumber");
-                        } else {
-                          Get.to(PayUpiIdScreen2(
-                            paymentTo: controller.payPhonenocntler.text,
-                          ));
-                        }
-                      },
-                      child: Text("Continue"),
-                      style: ElevatedButton.styleFrom(
-                        backgroundColor: AppColors.primaryColor,
-                      ),
-                    ),
-                  ),
+          Padding(
+            padding: EdgeInsets.fromLTRB(10, 15, 10, 10),
+            child: SizedBox(
+              width: MediaQuery.of(context).size.width,
+              height: 40,
+              child: ElevatedButton(
+                onPressed: () {
+                  if (controller.payPhonenocntler.text == "" ||
+                      controller.payPhonenocntler.text.length != 10) {
+                    Get.snackbar(
+                        "Error", "enter a Valid Upi verified PhoneNumber");
+                  } else {
+                    Get.to(PayUpiIdScreen2(
+                      paymentTo: controller.payPhonenocntler.text,
+                    ));
+                  }
+                },
+                child: Text("Continue"),
+                style: ElevatedButton.styleFrom(
+                  backgroundColor: AppColors.primaryColor,
                 ),
+              ),
+            ),
+          ),
         ],
       )),
     ));

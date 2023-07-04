@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:get/get.dart';
 import 'package:untitled7/Ace_Money/presentation/Manager/paycontactsController.dart';
-import 'package:untitled7/Ace_Money/presentation/pages/paymentUsingContacts.dart';
+import 'package:untitled7/Ace_Money/presentation/pages/MobNoVerification.dart';
 import 'package:untitled7/Ace_Money/presentation/pages/payupiid_page2.dart';
 
 import '../themes/app_colors.dart';

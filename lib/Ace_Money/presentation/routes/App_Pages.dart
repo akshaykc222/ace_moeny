@@ -1,4 +1,4 @@
-import 'package:untitled7/Ace_Money/presentation/pages/paymentUsingContacts.dart';
+import 'package:untitled7/Ace_Money/presentation/pages/MobNoVerification.dart';
 
 class AppPages {
   ///Shibin
@@ -24,6 +24,8 @@ class AppPages {
   ///jishnu
   static const paycontacts = '/paycontacts';
   static const payPhoneno = "/payPhoneno";
+  static const verifyMobileno = "/verifyMobileno";
+  static const mobNoSms = "/MobNoSms";
 
   ///vishnu
   static const payupiidpage = '/payupiidpage';

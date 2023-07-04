@@ -65,6 +65,14 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "3.1.1"
+  country_picker:
+    dependency: "direct main"
+    description:
+      name: country_picker
+      sha256: aa975b41c8052298d227ff7ff58d6eddcad0196127445f72af7456224c9ef104
+      url: "https://pub.dev"
+    source: hosted
+    version: "2.0.20"
   cross_file:
     dependency: transitive
     description:
@@ -392,6 +400,14 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "1.0.4"
+  mobile_number:
+    dependency: "direct main"
+    description:
+      name: mobile_number
+      sha256: "4c3ef292b198c8607385a75f6afae73b34026a9238931d116b42e2c7120c8eec"
+      url: "https://pub.dev"
+    source: hosted
+    version: "2.1.1"
   path:
     dependency: transitive
     description:
@@ -485,6 +501,14 @@ packages:
     description: flutter
     source: sdk
     version: "0.0.99"
+  sms_otp_auto_verify:
+    dependency: "direct main"
+    description:
+      name: sms_otp_auto_verify
+      sha256: "7c7fa9c7f08f60b34e9ba683796899b13c889a68d074b5ed91db9ab72f9b1355"
+      url: "https://pub.dev"
+    source: hosted
+    version: "2.1.0"
   source_span:
     dependency: transitive
     description:

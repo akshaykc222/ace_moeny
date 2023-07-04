@@ -1,4 +1,4 @@
- import 'package:flutter/cupertino.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:get/get.dart';
 import 'package:untitled7/Ace_Money/presentation/routes/App_Pages.dart';
 import 'package:untitled7/Ace_Money/presentation/routes/App_Routes.dart';
@@ -10,7 +10,7 @@ class App extends StatelessWidget {
   Widget build(BuildContext context) {
     return GetMaterialApp(
       debugShowCheckedModeBanner: false,
-      initialRoute: AppPages.dashboard,
+      initialRoute: AppPages.verifyMobileno,
       getPages: AppRoutes.routes,
     );
   }
