@@ -1,13 +1,9 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:get/get.dart';
-import 'package:intl_phone_field/intl_phone_field.dart';
 import 'package:untitled7/Ace_Money/presentation/Manager/payPhoneNoController.dart';
-import 'package:untitled7/Ace_Money/presentation/pages/payContacts.dart';
 import 'package:untitled7/Ace_Money/presentation/pages/payupiid_page2.dart';
 import 'package:untitled7/Ace_Money/presentation/routes/App_Pages.dart';
-import 'package:untitled7/Ace_Money/presentation/routes/App_Routes.dart';
 import 'package:untitled7/Ace_Money/presentation/themes/app_colors.dart';
 
 import '../Manager/paycontactsController.dart';
@@ -15,7 +11,7 @@ import '../Manager/paycontactsController.dart';
 class PayPhoneNo extends StatelessWidget {
   PayPhoneNo({super.key});
   final controller = Get.find<PayPhoneNoController>();
-  final Paycontactscntler = Get.put(PayContactsController());
+  final payContactsController = Get.put(PayContactsController());
   @override
   Widget build(BuildContext context) {
     return SafeArea(
@@ -26,7 +22,7 @@ class PayPhoneNo extends StatelessWidget {
             onPressed: () {
               Get.back();
             },
-            icon: Icon(
+            icon: const Icon(
               Icons.arrow_back_ios,
               color: AppColors.black,
             )),
@@ -37,8 +33,8 @@ class PayPhoneNo extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.start,
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Padding(
-            padding: const EdgeInsets.fromLTRB(10, 10, 0, 10),
+          const Padding(
+            padding: EdgeInsets.fromLTRB(10, 10, 0, 10),
             child: Text(
               "Enter a Phone number",
               style: TextStyle(
@@ -47,8 +43,8 @@ class PayPhoneNo extends StatelessWidget {
                   fontSize: 20),
             ),
           ),
-          Padding(
-            padding: const EdgeInsets.fromLTRB(10, 0, 0, 10),
+          const Padding(
+            padding: EdgeInsets.fromLTRB(10, 0, 0, 10),
             child: Text(
               'Pay someone using a UPI verified phone number',
               style:
@@ -66,11 +62,14 @@ class PayPhoneNo extends StatelessWidget {
                   child: TextFormField(
                     autofocus: true,
                     validator: (value) {
-                      if (value == null || value.length != 10) {
+                      if (value == null || value.length != 10)
+                      {
+
                         return "Enter a valid UPI verified Number";
                       }
+                      return null;
                     },
-                    decoration: InputDecoration(
+                    decoration: const InputDecoration(
                       border: OutlineInputBorder(
                           borderSide: BorderSide(
                         width: 1,
@@ -79,28 +78,28 @@ class PayPhoneNo extends StatelessWidget {
                     inputFormatters: [LengthLimitingTextInputFormatter(10)],
                     controller: controller.payPhonenocntler,
                     keyboardType: TextInputType.phone,
-                    onChanged: (value) {
-                      controller.payPhonenocntler.text = value;
-                    },
+                    // onChanged: (value) {
+                    //   controller.payPhonenocntler.text = value;
+                    // },
                   ),
                 ),
                 Expanded(
                   child: GestureDetector(
                     onTap: () {
-                      Paycontactscntler.displayContacts();
+                      payContactsController.displayContacts();
 
-                      Paycontactscntler.searchController.clear();
+                      payContactsController.searchController.clear();
 
                       Get.toNamed(AppPages.paycontacts);
                     },
                     child: Padding(
                       padding: const EdgeInsets.only(bottom: 0),
                       child: Container(
-                        decoration: BoxDecoration(
+                        decoration: const BoxDecoration(
                             shape: BoxShape.circle,
                             color: AppColors.primaryColor),
-                        child: Padding(
-                          padding: const EdgeInsets.all(8.0),
+                        child: const Padding(
+                          padding: EdgeInsets.all(8.0),
                           child: Icon(
                             Icons.person,
                             color: Colors.white,
@@ -115,9 +114,9 @@ class PayPhoneNo extends StatelessWidget {
           ),
           controller.payPhonenocntler.text.isEmpty ||
                   controller.payPhonenocntler.text.length != 10
-              ? SizedBox()
+              ? const SizedBox()
               : Padding(
-                  padding: EdgeInsets.fromLTRB(10, 15, 10, 10),
+                  padding: const EdgeInsets.fromLTRB(10, 15, 10, 10),
                   child: SizedBox(
                     width: MediaQuery.of(context).size.width,
                     height: 40,
@@ -132,10 +131,10 @@ class PayPhoneNo extends StatelessWidget {
                           ));
                         }
                       },
-                      child: Text("Continue"),
                       style: ElevatedButton.styleFrom(
                         backgroundColor: AppColors.primaryColor,
                       ),
+                      child: const Text("Continue"),
                     ),
                   ),
                 ),

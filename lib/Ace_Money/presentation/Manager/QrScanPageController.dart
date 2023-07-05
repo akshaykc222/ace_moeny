@@ -3,7 +3,6 @@ import 'package:get/get.dart';
 import 'package:image_picker/image_picker.dart';
 import 'package:qr_code_scanner/qr_code_scanner.dart';
 import 'package:untitled7/Ace_Money/presentation/pages/payupiid_page2.dart';
-import 'package:untitled7/Ace_Money/presentation/routes/App_Pages.dart';
 
 class QrScanController extends GetxController {
   final GlobalKey qrKey = GlobalKey(debugLabel: 'QR');
