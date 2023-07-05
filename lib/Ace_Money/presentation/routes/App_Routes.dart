@@ -1,9 +1,13 @@
 import 'package:get/get_navigation/src/routes/get_route.dart';
 import 'package:untitled7/Ace_Money/presentation/Bindings/AddBankAccountControllerBinding.dart';
+
+import 'package:untitled7/Ace_Money/presentation/Bindings/MobNoverificationControllerBinding.dart';
 import 'package:untitled7/Ace_Money/presentation/Bindings/PayContactsControllerBinding.dart';
 import 'package:untitled7/Ace_Money/presentation/Bindings/PayPhoneNoControllerBinding.dart';
 import 'package:untitled7/Ace_Money/presentation/Bindings/QrScanPageControllerBinding.dart';
 import 'package:untitled7/Ace_Money/presentation/Bindings/upiidcontrollerbinding.dart';
+
+import 'package:untitled7/Ace_Money/presentation/pages/MobNoVerification.dart';
 import 'package:untitled7/Ace_Money/presentation/pages/addBankAccount.dart';
 
 import 'package:untitled7/Ace_Money/presentation/pages/payPhoneNo.dart';
@@ -39,6 +43,10 @@ class AppRoutes {
       PayContactsControllerBinding(),
       PayPhoneNoControllerBinding()
     ]),
+    GetPage(
+        name: AppPages.verifyMobileno,
+        page: () => MobileNoVerify(),
+        binding: MobNoverificationControllerBinding()),
 
     ///vishnu
     GetPage(

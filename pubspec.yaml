@@ -47,6 +47,9 @@ dependencies:
   get_it: 7.6.0
   image_picker: ^1.0.0
   contacts_service: ^0.6.3
+  mobile_number: ^2.1.1
+  country_picker: ^2.0.20
+  sms_otp_auto_verify: ^2.1.0
 
 
 dev_dependencies:
